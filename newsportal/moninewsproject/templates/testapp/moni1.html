@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+<!--    <link rel="stylesheet" href="{% static 'css/demo.css' %}">-->
+    <style>
+        .title{
+            text-align: center;
+            border: 0px solid black;
+            background-color: honeydew;
+            color: black;
+            margin-left:250px;
+            margin-right: 260px;
+
+        }
+        .images3{
+            text-align: center;
+          }
+        body{
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <div class="title">{{head}}</div>
+    <li>
+        {{msg1}}
+    </li>
+    <li>
+        {{msg2}}
+    </li>
+    <li>
+        {{msg3}}
+    </li>
+</ul>
+
+{% if type == 'movies' %}
+<div class="images3">
+<img src="{% static 'movieimages/movie1.jpeg' %}" width="200px" height="200px" border="2px">
+<img src="{% static 'movieimages/movie2.jpeg' %}" width="200px" height="200px" border="2px">
+<img src="{% static 'movieimages/movie4.jpg' %}" width="200px" height="200px" border="2px">
+</div>
+{% elif type == 'sports' %}
+<div class="images3">
+<img src="{% static 'sportsimages/sports1.jpeg' %}" width="200px" height="200px" border="2px">
+<img src="{% static 'sportsimages/sports2.jpeg' %}" width="200px" height="200px" border="2px">
+<img src="{% static 'sportsimages/sports4.jpg' %}" width="200px" height="200px" border="2px">
+    </div>
+{% elif type == 'politics' %}
+<div class="images3">
+<img src="{% static 'politicsimages/politics1.jpeg' %}" width="150px" height="150px" border="2px">
+<img src="{% static 'politicsimages/politics2.jpg' %}" width="150px" height=" 150px" border="2px">
+<img src="{% static 'politicsimages/politics3.jpeg' %}" width="150px" height="150px" border="2px">
+</div>
+{% endif %}
+</body>
+</html>
